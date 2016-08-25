@@ -67,5 +67,9 @@ theme: theme-spfk
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: git@github.com:gy190/gy190.github.io.git
-type: git
+deploy:
+  type: git
+  repo: git@github.com:gy190/gy190.github.io.git
+  branch: master
+  message: 更新
+
