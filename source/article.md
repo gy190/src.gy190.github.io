@@ -8,3 +8,10 @@
 
 - 组件化(shadow widget)
 
+- 柯里化
+
+- 函数式编程
+
+- Polyfill shim
+
+- 事件,高程里有
