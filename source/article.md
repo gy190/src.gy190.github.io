@@ -15,3 +15,5 @@
 - Polyfill shim
 
 - 事件,高程里有
+
+- disclose window下编译。通过ribuinstall 安装ruby
