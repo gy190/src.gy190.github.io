@@ -1,3 +1,11 @@
+---
+title: 动态页面seo设想
+date: 2015-12-25 9:13:22
+categories:
+- 编程
+tags:
+- nodejs
+---
 ### webpack
 核心就是一个打包器,它能够识别文件中的require export imprort等语句(amd/cmd/es6 module),从而能够识别文件的依赖关系,然后通过注入代码的方式,生成浏览器能够识别的依赖关系代码。
 在分析依赖文件的时候,通过配置文件中配置的一些laoder(babel、minify等),对文件内容进行预处理。  
