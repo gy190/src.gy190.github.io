@@ -1,5 +1,5 @@
 ---
-title: 动态页面seo设想
+title: 前端工程化之gulp+webpack+babel
 date: 2015-12-25 9:13:22
 categories:
 - 编程
