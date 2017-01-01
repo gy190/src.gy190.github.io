@@ -1,4 +1,4 @@
-## 先说一些结论
+## 一些结论
 - 构造函数、用new创建的对象、对象字面量都是实例
 - 实例上默认存在__proto__属性,该属性指向生成它的构造函数上的prototype对象。
 - 有且仅有构造函数有prototype属性,该属性是一个对象字面量
@@ -8,7 +8,7 @@
 - 实例上的属性查找机制:先搜索实例上是否有访问的属性,如果没查到,则继续从实例属性__proto__里进行查找,如果__proto__里没有,则继续进入到__proto__里的__proto__进行查找,
 直到查到请求的数据,或已经查到最高层Object.prototype.__proto__ 直接返回null。
 - 根据属性查询机制和prototype、__proto__特性可以实现原型式继承。
-- Function和Object是两个特殊的根构造函数。Object是Function的实例,Object.__proto__指向Function.prototype,Fucntion是Function(自己是自己的)的实例。Function.__proto__指向自己的
+- Function和Object是两个特殊的根构造函数——**Function和Object构成一个封闭的环**;Object是Function的实例,Object.__proto__指向Function.prototype,Fucntion是Function(自己是自己的)的实例。Function.__proto__指向自己的
 Function.prototype,Function.prototype.__proto__指向Object.prototype。
 
 
