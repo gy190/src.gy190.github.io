@@ -25,7 +25,6 @@ Function.prototype,Function.prototype.__proto__指向Object.prototype。
 - 构造函数(方法/类)
 1. 使用function构建的代码块都是构造函数
 2. Function是根构造函数,所有其他的构造函数都是该函数的实例。如Object, Array,Math,自定义函数等
-
 ```
 console.log(Object instanceof Function); //true
 console.log(Object.__proto__ == Function.prototype)
@@ -33,15 +32,11 @@ console.log(Array instanceof Function); //true
 function A() {}
 console.log(A instanceof Function); //true
 ```
-
 3. Function也是实例,但它是它自己的实例
-
 ```
 console.log(Function.__proto__ == Function.prototype) //true 默认只有Function具有这一特性
 ```
-
 4. 其它实例的__proto__都指向该实例的构造函数上的prototype对象
-
 ```
 console.log(Array.__proto__ == Function.prototype) //true 原生构造函数是Function实例
 
@@ -49,17 +44,14 @@ function A() {}
 console.log(A.__proto__ == Function.prototype) //ture 自定义构造函数是Function实例
 
 var a = new A(); 
-console.log(a.__proto__ == A.prototype) //
+console.log(a.__proto__ == A.prototype) //true
 ```
-
 5. 方法是一个特殊的实例,是Function函数的实例
-
 ```
 function A() {}
 console.log(A instanceof Function) //true
 ```
 6. 方法上默认会有一个prototype属性,该属性里的属性/方法被该方法的所有实例共享
-
 ```
 function A() {}
 A.prototype.o = {m : 10}
@@ -74,18 +66,14 @@ console.log(a2.o.m) // 13
 
 - 实例
 1. 通过new一个函数返回的值就叫做这个函数的实例;如:
-
 ```
 function A(){}
 var a = new A(); //a是实例
 ```
-
 2. 对象字面量也是一个实例。如:
-
 ```
 var a = {} //a是实例
 ```
-
 3. 实例默认包含一个__proto__属性
 
 - __proto__属性
@@ -93,22 +81,17 @@ var a = {} //a是实例
 
 - prototype
 1. 方法(函数/类)上的默认属性,当使用new创建方法的实例时,实例上会自动包含一个__proto__属性指向方法上的该属性。
-
 ```
 function A() {}
 var a = new A();
 console.log(a.__proto__ == A.prototype) //true
 ```
-
-2. 该属性为引用数据类型,也指向一个实例。默认指向一个对象字面量```{}```。 例:  
-
+2. 该属性为引用数据类型,也指向一个实例。默认指向一个对象字面量```{}```。 例: 
 ```
 function A() {}
 console.log(typeof A.prototype) //object
 ```
-
-- 对象字面量```{}```
-
+- 对象字面量({})
 1. 上文说过,对象字面量也是实例,所以对象字面量也有__proto__属性  
 2. 对象字面量的__proto__默认指向Object.prototype,即定义在Object.prototype上的属性/方法都能被对象字面量访问到  
 
