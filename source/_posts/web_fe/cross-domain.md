@@ -1,12 +1,13 @@
 ---
 title: js那点事系列:跨域
 date: 2014-03-18 13:20:19
+keywords: 前端跨域技术总结,js
 categories:
 - 编程
 tags:
 - js
 ---
-
+对跨域技术的总结性分析。
 ## 已知的请求资源的方法
 - ajax
 - form

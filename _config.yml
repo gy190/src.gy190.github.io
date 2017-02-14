@@ -4,11 +4,12 @@
 
 # Site
 title: gy190
-subtitle:
-description:
+subtitle: 技术总结、备忘
+description: 前端开发经验总结;html5;js;css;
 author: gy190
 language: zh-CN
 timezone:
+keywords: 前端博客,JavaScript,html5,css3,NodeJs
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
