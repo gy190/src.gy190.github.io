@@ -20,3 +20,15 @@ tags:
 6. css3 display:box 控制子容器的呈现方式 box-flex 
 
 7. img会有透明边距，只能用display:block可去除。 注意给width:100%，否则图片大小不会按照父元素的宽度去渲染。
+
+8. ios里，设置了overflow滚动容器滚动时会卡顿。需要设置 -webkit-overflow-scrolling : touch;   属性。  原理请自行查阅。
+
+9. 一些基于ios的app里，可滚动的h5元素容器内有图片，并且已经加载完成，此时使用scrollIntoView滚动到容器底部。 会导致容器内元素消失。手动滑动屏幕，元素出现。用下面这个方法可以解决该问题。
+```
+ if (isIOS()) {
+    DomContainerObj.style.display = 'none';
+    setTimeout(function() {
+        DomContainerObj.style.display = 'block';
+    })
+ }
+```
